@@ -3,7 +3,7 @@ High-performance reimplementation of GNU yes, but made at home in Rust.
 
 As I am not very good at writing in Rust, I probably made a lot of subtle mistakes; please submit a PR if you find anything!
 
-The entire codebase is 33 lines long, excluding comments and empty lines. Compare this to the [uutils implementation](https://github.com/uutils/coreutils/blob/main/src/uu/yes/src/yes.rs), which has ~161 lines of actual code.
+The entire codebase is 25 lines long, excluding comments and empty lines. Compare this to the [uutils implementation](https://github.com/uutils/coreutils/blob/main/src/uu/yes/src/yes.rs), which has ~161 lines of actual code.
 
 ## Benchmarking
 
