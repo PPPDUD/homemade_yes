@@ -1,6 +1,8 @@
 use std::env;
 use std::io::{self, Write};
 
+// Note: This version is not actually POSIX-compliant, and the filename is a misnomer. See README.md for more information.
+
 fn main() {
     let mut args: Vec<String> = env::args().collect();
     let joined;
