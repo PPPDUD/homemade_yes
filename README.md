@@ -5,6 +5,8 @@ As I am not very good at writing in Rust, I probably made a lot of subtle mistak
 
 The entire codebase is 25 lines long, excluding comments and empty lines. Compare this to the [uutils implementation](https://github.com/uutils/coreutils/blob/main/src/uu/yes/src/yes.rs), which has ~161 lines of actual code.
 
+The executables under the `Releases` tab are built for an amd64 Linux system, and are statically linked with `musl`.
+
 ## Benchmarking
 
 You can benchmark `homemade_yes` by running `./homemade_yes | pv -N "Homemade yes" -r -t > /dev/null`.
