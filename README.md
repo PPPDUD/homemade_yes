@@ -11,7 +11,9 @@ You can benchmark `homemade_yes` by running `./homemade_yes | pv -N "Homemade ye
 
 On my build machine, it can obtain a throughput of about ~3.5 gigabytes per second, which is comparable to GNU yes (v9.5). On a nice laptop from the past ~5 years and Xubuntu 25.04, I was able to achieve ~4.2 gigabytes per second, whereas GNU yes usually hovered around ~4.0 gigabytes per second. 
 
-## POSIX-only version
-I have also written a POSIX version of `yes` at `src/bin/posix-only.rs`. This version does not include the `--version` and `--help` arguments, simplifying the code massively.
+## Traditional version
+I have also written a more traditional version of `yes` at `src/bin/posix-only.rs`. This version does not include the `--version` and `--help` arguments, simplifying the code massively.
 
 In all other respects, it should act roughly identical to the GNU implementation from `src/main.rs`. If it doesn't, please file an issue so that I can fix it.
+
+_Note: I previously referred to this build as being a "POSIX-only" version. This is incorrect; there does not appear to be an applicable POSIX specification here._
