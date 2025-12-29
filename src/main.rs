@@ -17,8 +17,8 @@ fn main() {
     }
 
     if pos_help > pos_version {
-        println!("yes (Mojavesoft implementation); should be compatible with GNU yes v9.5");
-        println!("Copyright November 2025.");
+        println!("yes v0.3 (Mojavesoft implementation); should be compatible with GNU yes v9.5");
+        println!("Copyright November and December 2025.");
         return;
     }
 
