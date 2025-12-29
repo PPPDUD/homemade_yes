@@ -1,3 +1,4 @@
 [profile.release]
 strip = true
 debug = false
+target = "x86_64-unknown-linux-musl"
