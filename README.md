@@ -5,7 +5,7 @@ As I am not very good at writing in Rust, I probably made a lot of subtle mistak
 
 The entire codebase is 25 lines long, excluding comments and empty lines. Compare this to the [uutils implementation](https://github.com/uutils/coreutils/blob/main/src/uu/yes/src/yes.rs), which has ~161 lines of actual code.
 
-The executables under the `Releases` tab are built for an x86_64 Linux system, and are statically linked with `musl`.
+The executables under the `Releases` tab are built for an x86_64 processor. The Linux builds are statically linked with `musl`, and the Windows builds are built using `mingw-w64`.
 
 ## Benchmarking
 
