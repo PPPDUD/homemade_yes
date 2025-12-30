@@ -24,3 +24,16 @@ _Note: I previously referred to this build as being a "POSIX-only" version. This
 Since version v0.3, I have added experimental support for Windows builds; see https://zork.net/~st/jottings/rust-windows-and-debian.html for instructions on how to cross-compile.
 
 The Windows builds should behave exactly like their Linux counterparts and have been tested under Wine.
+
+## Building from source
+In order to automate the build process, I have written two scripts. These should be executed on a Debian-based machine with Rust installed, optimally in a VM (some metadata, like your username, could get included in the executables).
+
+### setup.sh
+`setup.sh` prepares your system for building `homemade_yes`. To run it, execute `curl https://mojavesoft.net/scripts/homemade_yes/setup.sh | bash`. It installs `ruby`, `git`, and `mingw-w64`. Afterwards, it then adds the `fpm` gem for building Debian packages and clones this repository.
+
+Finally, it adds the `x86_64-pc-windows-gnu` build target so that you can cross-compile for Windows.
+
+### build.sh
+`build.sh` builds the latest version of `homemade_yes`. First, it updates the repository with `git pull` to fetch any recent updates. Afterwards, it uses `cargo` to build the binaries for Windows and Linux. Finally, it creates the `deb_package` directory and places the final Debian package in it.
+
+To start the build process, run `curl https://mojavesoft.net/script/homemade_yes/build.sh | bash`.
