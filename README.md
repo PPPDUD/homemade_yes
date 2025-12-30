@@ -21,7 +21,7 @@ In all other respects, it should act roughly identical to the GNU implementation
 _Note: I previously referred to this build as being a "POSIX-only" version. This is incorrect; there does not appear to be an applicable POSIX specification here._
 
 ## Windows compatibility
-Since version v0.3, I have added experimental support for Windows builds; see https://zork.net/~st/jottings/rust-windows-and-debian.html for instructions on how to cross-compile.
+Since version v0.3, I have added experimental support for Windows builds.
 
 The Windows builds should behave exactly like their Linux counterparts and have been tested under Wine.
 
