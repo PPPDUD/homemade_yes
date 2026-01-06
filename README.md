@@ -39,4 +39,6 @@ Finally, it adds the `x86_64-pc-windows-gnu` build target so that you can cross-
 To start the build process, run `curl https://mojavesoft.net/script/homemade_yes/build.sh | bash`.
 
 ## Issues on Debian-based systems
-I have recently discovered that installing `homemade_yes` on Debian-based machines using the `.deb` file doesn't give `/usr/bin/homemade_yes` executable permissions, making it fail to run. You can fix it by running `sudo chmod +x /usr/bin/homemade_yes`.
+I have recently discovered that installing `homemade_yes` on Debian-based machines using the `.deb` file doesn't give `/usr/bin/homemade_yes` executable permissions, making it fail to run. 
+
+You can fix it by running `sudo chmod +x /usr/bin/homemade_yes`.
