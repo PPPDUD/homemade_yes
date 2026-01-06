@@ -37,3 +37,6 @@ Finally, it adds the `x86_64-pc-windows-gnu` build target so that you can cross-
 `build.sh` builds the latest version of `homemade_yes`. First, it updates the repository with `git pull` to fetch any recent updates. Afterwards, it uses `cargo` to build the binaries for Windows and Linux. Finally, it creates the `deb_package` directory and places the final Debian package in it.
 
 To start the build process, run `curl https://mojavesoft.net/script/homemade_yes/build.sh | bash`.
+
+## Issues on Debian-based systems
+I have recently discovered that installing `homemade_yes` on Debian-based machines using the `.deb` file doesn't give `/usr/bin/homemade_yes` executable permissions, making it fail to run. You can fix it by running `sudo chmod +x /usr/bin/homemade_yes`.
