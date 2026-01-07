@@ -17,8 +17,8 @@ fn main() {
     }
 
     if pos_help > pos_version {
-        println!("yes v0.3 (Mojavesoft implementation); should be compatible with GNU yes v9.5");
-        println!("Copyright November and December 2025.");
+        println!("yes v0.4 (Mojavesoft implementation); should be compatible with GNU yes v9.5 and uutils yes 0.2.2");
+        println!("Copyright January 2026.");
         return;
     }
 
@@ -27,6 +27,6 @@ fn main() {
     } else {joined = args.join(" ") + "\n"; joined.as_bytes()};
 
     let mut io_handle = io::stdout().lock();
-    let buf = output_str.repeat(4096);
+    let buf = output_str.repeat(16384/output_str.len());
     loop {if io_handle.write_all(&buf).is_err() {return;}}
 }
