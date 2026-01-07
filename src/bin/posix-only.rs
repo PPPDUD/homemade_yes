@@ -14,6 +14,6 @@ fn main() {
     } else {joined = args.join(" ") + "\n"; joined.as_bytes()};
 
     let mut io_handle = io::stdout().lock();
-    let buf = output_str.repeat(4096);
+    let buf = output_str.repeat(16384/output_str.len());
     loop {if io_handle.write_all(&buf).is_err() {return;}}
 }
