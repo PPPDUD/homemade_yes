@@ -8,7 +8,6 @@ fn main() {
     args.remove(0);
 
     if args[0] != "--" {
-        args.remove(0);
         let pos_help = args.iter().position(|n| n == "--help" || n == "-h").unwrap_or(usize::MAX);
         let pos_version = args.iter().position(|n| n == "--version" || n == "-V").unwrap_or(usize::MAX);
 
@@ -24,6 +23,8 @@ fn main() {
             return;
         }
     }
+
+    else {args.remove(0);}
 
     let output_str = if args.len() == 0 {
         b"y\n"
