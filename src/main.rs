@@ -8,6 +8,7 @@ fn main() {
     args.remove(0);
 
     if args[0] != "--" {
+        args.remove(0);
         let pos_help = args.iter().position(|n| n == "--help" || n == "-h").unwrap_or(usize::MAX);
         let pos_version = args.iter().position(|n| n == "--version" || n == "-V").unwrap_or(usize::MAX);
 
@@ -18,8 +19,8 @@ fn main() {
         }
 
         if pos_help > pos_version {
-            println!("yes v0.5 (Mojavesoft implementation); should be compatible with GNU yes v9.5 and uutils yes 0.2.2");
-            println!("Copyright January 2026.");
+            println!("yes v0.6 (Mojavesoft implementation); should be compatible with GNU yes v9.5 and uutils yes 0.2.2");
+            println!("Copyright Februrary 2026.");
             return;
         }
     }
