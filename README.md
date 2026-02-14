@@ -36,7 +36,7 @@ The Windows builds should behave exactly like their Linux counterparts and have 
 In order to automate the build process, I have written two scripts. These should be executed on a Debian-based machine with Rust installed, optimally in a VM (some metadata, like your username, could get included in the executables).
 
 ### setup.sh
-`setup.sh` prepares your system for building `homemade_yes`. To run it, execute `curl https://mojavesoft.net/scripts/homemade_yes/setup.sh | bash`. It installs `ruby`, `git`, and `mingw-w64`. Afterwards, it then adds the `fpm` gem for building Debian packages and clones this repository.
+`setup.sh` prepares your system for building `homemade_yes`. To run it, execute `curl https://mojavesoft.net/script/homemade_yes/setup.sh | bash`. It installs `ruby`, `git`, and `mingw-w64`. Afterwards, it then adds the `fpm` gem for building Debian packages and clones this repository.
 
 Finally, it adds the `x86_64-pc-windows-gnu` build target so that you can cross-compile for Windows.
 
