@@ -1,5 +1,5 @@
 # homemade_yes
-High-performance reimplementation of GNU yes, but made at home in Rust.
+High-performance reimplementation of GNU/uutils yes, but made at home in Rust.
 
 I accidentally leaked personal info in the previous `homemade_yes` repository, so this one is a recreated version with the latest updates.
 
