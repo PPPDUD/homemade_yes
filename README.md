@@ -3,7 +3,7 @@ High-performance reimplementation of GNU/uutils yes, but made at home in Rust.
 
 I accidentally leaked personal info in the previous `homemade_yes` repository, so this one is a recreated version with the latest updates.
 
-The primary codebase is 27 lines long, excluding comments and empty lines. Compare this to the [uutils implementation](https://github.com/uutils/coreutils/blob/main/src/uu/yes/src/yes.rs), which has ~161 lines of actual code.
+The primary codebase is 28 lines long, excluding comments and empty lines. Compare this to the [uutils implementation](https://github.com/uutils/coreutils/blob/main/src/uu/yes/src/yes.rs), which has ~161 lines of actual code.
 
 The executables under the `Releases` tab are built for an x86_64 processor. The Linux builds are statically linked with `musl`, and the Windows builds are built using `mingw-w64`.
 
