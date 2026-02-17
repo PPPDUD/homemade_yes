@@ -45,5 +45,10 @@ Finally, it adds the `x86_64-pc-windows-gnu` build target so that you can cross-
 
 To start the build process, run `curl https://mojavesoft.net/script/homemade_yes/build.sh | bash`.
 
+### Testing
+Since version v0.6.1, `homemade_yes` has included testing suites for the x86 Linux builds. To run them, you need to install `bats-core` (on Ubuntu you can do this by running `sudo apt install bats`).
+
+To test the GNU-style implementation, run `bats homemade_yes.bats -T --gather-test-outputs-in results-full -x -o results --report-formatter tap` in the `tests` directory, and run `bats posix-only.bats -T --gather-test-outputs-in results-traditional -x -o results --report-formatter tap` for the traditional implementation.
+
 ### A note about old forks
 If you have previously built `homemade_yes` versions predating v0.5, you may get an error about divergent branches. If this happens, delete the `homemade_yes` folder and run `setup.sh` again.
