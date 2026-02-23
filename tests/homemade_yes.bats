@@ -61,11 +61,11 @@
 }
 
 @test "-- -hV" {
-  result="$(../target/x86_64-unknown-linux-musl/release/homemade_yes -- --hV|head -n 1)"
+  result="$(../target/x86_64-unknown-linux-musl/release/homemade_yes -- -hV|head -n 1)"
   [[ "$result" == "-hV" ]]
 }
 
 @test "-- -Vh" {
-  result="$(../target/x86_64-unknown-linux-musl/release/homemade_yes -- --Vh|head -n 1)"
+  result="$(../target/x86_64-unknown-linux-musl/release/homemade_yes -- -Vh|head -n 1)"
   [[ "$result" == "-Vh" ]]
 }
