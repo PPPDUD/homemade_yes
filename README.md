@@ -1,5 +1,5 @@
 # homemade_yes
-High-performance reimplementation of GNU/uutils yes, but made at home in Rust.
+A Rust implementation of the Unix-like `yes` command, with heavy inspiration from `uutils`.
 
 I accidentally leaked personal info in the previous `homemade_yes` repository, so this one is a recreated version with the latest updates.
 
@@ -20,12 +20,6 @@ Here are some test results from my build machine, which runs Ubuntu 25.10:
 
 `homemade_yes` 0.5 and 0.6 were not tested because they don't provide any meaningful performance improvements.
 
-## Traditional version
-I have also written a more traditional version of `yes` at `src/bin/posix-only.rs`. This version does not include the `--version` and `--help` arguments, simplifying the code massively.
-
-In all other respects, it should act roughly identical to the GNU implementation from `src/main.rs`. If it doesn't, please file an issue so that I can fix it.
-
-_Note: I previously referred to this build as being a "POSIX-only" version. This is incorrect; there does not appear to be an applicable POSIX specification here._
 
 ## Windows compatibility
 Since version v0.3, I have added experimental support for Windows builds.
@@ -48,7 +42,7 @@ To start the build process, run `curl https://mojavesoft.net/script/homemade_yes
 ### Testing
 Since version v0.6.1, `homemade_yes` has included testing suites for the x86 Linux builds. To run them, you need to install `bats-core` (on Ubuntu you can do this by running `sudo apt install bats`).
 
-To test the GNU-style implementation, run `bats homemade_yes.bats -T --gather-test-outputs-in results-gnu -x -o results-gnu --report-formatter tap` in the `tests` directory, and run `bats posix-only.bats -T --gather-test-outputs-in results-traditional -x -o results-traditional --report-formatter tap` for the traditional implementation.
+To run the test suite, execute `bats homemade_yes.bats -T --gather-test-outputs-in results-gnu -x -o results-gnu --report-formatter tap` in the `tests` directory.
 
 ### A note about old forks
 If you have previously built `homemade_yes` versions predating v0.5, you may get an error about divergent branches. If this happens, delete the `homemade_yes` folder and run `setup.sh` again.

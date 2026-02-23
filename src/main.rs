@@ -8,8 +8,8 @@ fn main() {
     args.remove(0);
 
     if args.get(0).as_deref() != Some(&"--".to_string()) {
-        let pos_help = args.iter().position(|n| n == "--help" || n == "-h").unwrap_or(usize::MAX);
-        let pos_version = args.iter().position(|n| n == "--version" || n == "-V").unwrap_or(usize::MAX);
+        let pos_help = args.iter().position(|n| n == "--help" || n.starts_with("-h")).unwrap_or(usize::MAX);
+        let pos_version = args.iter().position(|n| n == "--version" || n.starts_with("-V")).unwrap_or(usize::MAX);
 
         if pos_help < pos_version {
             println!("Outputs the string provided in the arguments forever. If no string is given, outputs 'y' repeatedly.");
@@ -18,7 +18,7 @@ fn main() {
         }
 
         if pos_help > pos_version {
-            println!("yes v0.6.1 (Mojavesoft implementation); should be compatible with GNU yes v9.5 and uutils yes 0.2.2");
+            println!("yes v0.7 (Mojavesoft implementation); should be mostly compatible with GNU yes v9.5 and uutils yes 0.2.2");
             println!("Copyright Februrary 2026.");
             return;
         }
